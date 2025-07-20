@@ -6,7 +6,7 @@ It supports multiple AI-powered and manual control methods:
 - 📱 **iPad Web Control** (via Flask server)
 - 🎮 **Nintendo Switch Pro Controller Input**
 - 🗣️ **Offline Voice Recognition** (Vosk)
-- ✋ **Hand Gesture Control** (MediaPipe)
+- ✋ **Hand Gesture Control** (Google MediaPipe)
 - 🧠 **Obstacle Detection** (Ultrasonic + Buzzer)
 - 🎥 **Live Webcam Streaming** 
 
