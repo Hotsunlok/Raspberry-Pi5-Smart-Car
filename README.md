@@ -15,7 +15,7 @@ It supports multiple AI-powered and manual control methods:
 
 ### 🔥 Full Source Code
 
-- 🚀 [Full Raspberry Pi Python Code](link-to-your-main-Pi5car.py-file)
+- 🚀 [Full Raspberry Pi Python Code](Pi5car.py)
 
 ---
 
