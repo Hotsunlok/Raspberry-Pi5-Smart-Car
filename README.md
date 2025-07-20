@@ -39,7 +39,7 @@ python Pi5car.py
 ---
 ## 🌐 Web Server Feature Overview
 
-*(Explains live MJPEG webcam stream, car control buttons, obstacle warning box, voice recognition feedback, and gesture detection camera input.)*
+*(Explains live MJPEG webcam stream, car control buttons, dropdown menu for selection mode , obstacle warning box, voice recognition feedback, and gesture detection camera input.)*
 
 - 🌐 [Web Server Overview](link-to-web-server-doc)
 
