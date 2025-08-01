@@ -69,3 +69,122 @@ and **how it also detects hand gestures**...
 
 👉 check out this chapter:  
 🔗 [Logitech Webcam (used for video + hand gesture detection)](Logitech-Webcam.md)
+
+---
+### 🖱️ 3. iPad Web Control Buttons
+
+This feature gives you a **touch-based controller** right on your iPad!  
+When you choose **"iPad Buttons"** from the dropdown menu, you’ll see four buttons appear:
+
+- ▲ Move Forward (top-left)
+- ▼ Move Backward (bottom-left)
+- ◀ Turn Left (bottom-right)
+- ▶ Turn Right (top-right)
+
+![iPad Button Layout Screenshot](assets/ipad_buttons.jpg)
+
+Switch to any other mode (like 🎮 Controller, 🗣️ Voice, or ✋ Gesture), and these buttons will disappear automatically — super clean!
+
+
+---
+
+### 🎨 Button Style & Layout (HTML + CSS)
+
+The design includes size, shape, color, and placement:
+
+```html
+<style>
+  button {
+    width: 90px;
+    height: 90px;
+    font-size: 36px;
+    border-radius: 50%;
+    border: none;
+    color: white;
+    background-color: #04AA6D; /* Green */
+    box-shadow: 0 6px #666;
+    cursor: pointer;
+  }
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 3px #444;
+    transform: translateY(4px);
+  }
+</style>
+
+<div id="ipadButtons">
+  <div class="left-controls">
+    <button ontouchstart="send('forward')" ontouchend="send('stop')">▲</button>
+    <button ontouchstart="send('backward')" ontouchend="send('stop')">▼</button>
+  </div>
+  <div class="right-controls">
+    <button ontouchstart="send('left')" ontouchend="send('stop')">◀</button>
+    <button ontouchstart="send('right')" ontouchend="send('stop')">▶</button>
+  </div>
+</div>
+```
+### 🔁 Button Function Logic (Frontend → Backend)
+
+When you tap a button, it sends a wireless command to the Raspberry Pi 5 to control the car using PWM (Pulse Width Modulation) for smooth motor control. Each button triggers this JavaScript function:
+
+```html
+<script>
+  function send(cmd) {
+    fetch('/' + cmd);
+  }
+</script>
+```
+Then it calls Flask routes like this on the Raspberry Pi:
+```python
+@app.route('/forward')
+def forward_route():
+    if current_control_mode == 'ipad_buttons':
+        move_forward(MAX_PWM_SPEED)  # Uses PWM to set motor speed
+    return '', 200
+
+@app.route('/backward')
+def backward_route():
+    if current_control_mode == 'ipad_buttons':
+        move_backward(MAX_PWM_SPEED)
+    return '', 200
+
+@app.route('/left')
+def left_route():
+    if current_control_mode == 'ipad_buttons':
+        turn_left(MAX_PWM_SPEED)
+    return '', 200
+
+@app.route('/right')
+def right_route():
+    if current_control_mode == 'ipad_buttons':
+        turn_right(MAX_PWM_SPEED)
+    return '', 200
+
+@app.route('/stop')
+def stop_route():
+    if current_control_mode == 'ipad_buttons':
+        stop_motors()
+    return '', 200
+```
+### ⚙️ What Happens Internally?
+Example motor function:
+```python
+def move_forward(speed):
+    in1.on(); in2.off()
+    in3.off(); in4.on()
+    ena.value = speed  # PWM speed control
+    enb.value = speed
+    green_led1.on()
+    green_led2.on()
+    print(f"Action: Forward at {speed:.2f}")
+```
+- The buttons send fetch commands like `/forward`
+- Flask receives it and checks the current mode
+- Then it uses **PWM signals** to spin the wheels
+- When you lift your finger → `/stop` is sent → motors stop smoothly
+---
+📎 If you're curious about how **PWM signals** control the motors  
+and how the **L298N driver moves 4 wheels forward/backward**...
+
+👉 check out this chapter:  
+🔗 [L298N Motor Driver with 4 Wheels](L298N-Motor.md)
