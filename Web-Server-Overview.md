@@ -188,3 +188,213 @@ and how the **L298N driver moves 4 wheels forward/backward**...
 
 👉 check out this chapter:  
 🔗 [L298N Motor Driver with 4 Wheels](L298N-Motor.md)
+
+---
+### 🟧 4. Obstacle Warning Box
+
+This feature pops up a warning to let you know the car is getting too close to an obstacle — helping prevent crashes!
+
+📸 Screenshot of the warning box:
+
+![Obstacle Warning Screenshot](assets/obstacle_warning.png)
+
+
+---
+
+The warning message ("**Warning: Too Close!**") only shows when you're using **iPad Buttons** or **Switch Controller** mode. It’s **tied directly to the distance sensor** — when the car gets too close (under 20 cm), this message appears on the screen.
+
+💡 Here's the HTML used for the warning box:
+
+```html
+<div id="obstacleWarningBox">
+  <span id="obstacleWarningText">Warning: Too Close!</span>
+</div>
+```
+
+---
+
+### 🔄 How the Distance Sensor Triggers the Warning
+
+This section shows how the system constantly monitors the distance using a thread:
+
+```python
+def obstacle_detection_thread():
+    global obstacle_warning
+    while True:
+        if obstacle_detection_active:
+            distance = distance_sensor.distance * 100  # Convert to cm
+            if distance < 20:
+                buzzer.on()  # Buzzer beeps
+                obstacle_warning = True
+            else:
+                buzzer.off()
+                obstacle_warning = False
+        else:
+            buzzer.off()
+            obstacle_warning = False
+        time.sleep(0.1)
+```
+
+👆 When distance is under **20 cm**:
+
+* ✅ `obstacle_warning = True`
+* ✅ Buzzer turns on
+* ✅ Web warning box will show!
+
+---
+
+The web fetches this status using a Flask route (Flask route sends this status to the web server) :
+
+```python
+@app.route('/get_obstacle_status')
+def get_obstacle_status():
+    return jsonify({'warning': obstacle_warning}), 200
+```
+
+And the web interface shows/hides the warning like this:
+
+```html
+<script>
+  function updateObstacleWarning() {
+      fetch('/get_obstacle_status')
+          .then(response => response.json())
+          .then(data => {
+              const obstacleWarningBox = document.getElementById('obstacleWarningBox');
+              const obstacleWarningText = document.getElementById('obstacleWarningText');
+              if (data.warning) {
+                  obstacleWarningText.textContent = "Warning: Too Close!";
+                  obstacleWarningBox.style.display = 'block';
+              } else {
+                  obstacleWarningBox.style.display = 'none';
+              }
+          })
+          .catch(error => console.error('Error fetching obstacle status:', error));
+  }
+</script>
+```
+
+---
+
+📌 In summary:
+
+* Distance is monitored continuously using a background thread.
+* If distance < 20 cm → `obstacle_warning = True`
+* This value is fetched and used to show or hide the web warning box.
+* It also controls the buzzer, but we'll explain that more in a different chapter.
+
+---
+
+📎 If you're interested in how the **distance sensor calculates distance**,
+or how the **buzzer beeps** when the car is too close...
+
+👉 check out this chapter:
+🔗 [HC-SR04 Distance Sensor + 🔊 Active Buzzer (Obstacle Detection)](HC-SR04-Buzzer.md)
+
+---
+Perfect! Here's the improved and polished version of your **📢 Voice Recognition Feedback Box** section, formatted nicely for your GitHub markdown with emojis, clear explanation, a screenshot placeholder, and a redirect to the Vosk chapter at the end.
+
+---
+
+## 📢 Voice Recognition Feedback Box
+
+📸 Screenshot of the feedback display:
+
+![Voice Feedback Screenshot](assets/voice_feedback.png)
+
+
+This feedback box appears **only when "Voice Control" is selected** from the dropdown menu.
+It lets you **visually confirm what voice command** you just spoke — super helpful for making sure the car heard you correctly!
+
+---
+
+### 🧠 How It Works:
+
+* 🕹️ When you're in **Voice Control** mode, the box starts by displaying:
+  `"Ready for command: Say 'front', 'back', 'left', 'right', or 'stop'"`
+
+* 🎤 When you say one of the 5 commands (like `"front"`), the box updates to show:
+  `"Front"` (capitalized)
+
+* ⏳ After 2 seconds, it resets back to the original "Ready for command" message
+
+---
+
+### 🧩 Code for the Feedback Box
+
+#### 📦 HTML
+
+```html
+<div id="speechHistoryBox">
+  Ready for command: Say 'front', 'back', 'left', 'right', or 'stop'
+</div>
+```
+
+#### 🧠 JavaScript Logic
+
+```html
+<script>
+  let speechHistoryInterval;
+
+  document.addEventListener('DOMContentLoaded', () => {
+      if (!speechHistoryInterval) {
+          speechHistoryInterval = setInterval(updateSpeechHistory, 500);
+      }
+  });
+
+  function updateSpeechHistory() {
+      const speechHistoryBox = document.getElementById('speechHistoryBox');
+      fetch('/get_speech_history')
+          .then(response => response.json())
+          .then(data => {
+              if (data.command && data.command !== speechHistoryBox.dataset.lastCommand) {
+                  speechHistoryBox.textContent = data.command.charAt(0).toUpperCase() + data.command.slice(1);
+                  speechHistoryBox.dataset.lastCommand = data.command;
+
+                  if (speechDisplayTimeout) clearTimeout(speechDisplayTimeout);
+
+                  speechDisplayTimeout = setTimeout(() => {
+                      speechHistoryBox.textContent = "Ready for command: Say 'front', 'back', 'left', 'right', or 'stop'";
+                      speechHistoryBox.dataset.lastCommand = '';
+                  }, 2000);
+              }
+          })
+          .catch(error => {
+              console.error('Error fetching speech history:', error);
+              speechHistoryBox.textContent = 'Speech system error.';
+          });
+  }
+</script>
+```
+
+#### 🛠️ Flask Route
+
+```python
+@app.route('/get_speech_history')
+def get_speech_history():
+    if not speech_history_queue.empty():
+        command = speech_history_queue.get_nowait()
+        return jsonify({'command': command}), 200
+    return jsonify({'command': None}), 200
+```
+
+---
+
+### ✅ Summary:
+
+* 🧠 Always starts with a helpful message reminding you of available commands
+* 🗣️ Updates in real time when one of the five commands is recognized
+* ⏱️ After a short delay, resets to prompt the next voice input
+
+---
+
+📎 If you're curious about:
+
+* 🧠 **How offline speech recognition works with Vosk**
+* 🚗 **How the car moves in response to voice commands**
+
+👉 check out this chapter:
+🔗 [Offline Voice Recognition (Vosk)](Offline-Voice-Recognition-Vosk.md)
+
+---
+
+Let me know if you want help generating the actual screenshot or writing the next section!
