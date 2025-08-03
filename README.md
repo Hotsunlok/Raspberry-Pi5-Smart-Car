@@ -48,7 +48,7 @@ python Pi5car.py
 
 - 🧠 [Raspberry Pi 5](Raspberry-Pi5.md)
 - ⚙️ [L298N Motor Driver with 4 Wheels](#)
-- 🎮 [Nintendo Switch Pro Controller (Bluetooth)](#)
+- 🎮 [Nintendo Switch Pro Controller (Bluetooth)](Nintendo-Switch-Pro-Controller-Bluetooth.md)
 - 🎤 [Logitech Webcam Microphone (used for Vosk)](#)
 - 📷 [Logitech Webcam (used for video + hand gesture detection)](#)
 - 📏 [HC-SR04 Distance Sensor + 🔊 Active Buzzer (Obstacle Detection)](#)
