@@ -396,5 +396,109 @@ def get_speech_history():
 🔗 [Offline Voice Recognition (Vosk)](Offline-Voice-Recognition-Vosk.md)
 
 ---
+Here’s your ✋ **Gesture Detection Camera Input** section, upgraded with emojis, a clearer structure, visual placeholders, and a call to visit your full MediaPipe chapter later.
 
-Let me know if you want help generating the actual screenshot or writing the next section!
+---
+
+## ✋ 6. Gesture Detection Camera Input
+
+📸 Below are gesture examples captured during live streaming:
+
+```md
+| 🖐️ Thumb Up (Left)       | 👎 Thumb Down (Right)     | ✌️ Victory (Stop Sign)     |
+|--------------------------|---------------------------|----------------------------|
+| ![Thumb Up](assets/thumb_up.png) | ![Thumb Down](assets/thumb_down.png) | ![Victory Sign](assets/victory.png) |
+```
+
+This mode is **exclusive to "Gesture Recognition"** in the dropdown menu — and it's where the camera feed becomes much more than just a live view!
+
+Instead of showing plain video, this mode overlays your gestures in real time using **colorful hand-bone tracking lines** powered by MediaPipe. That means when you raise your hand and perform gestures like **Thumb Up**, **Thumb Down**, or the **Victory ✌️ sign**, you'll see rainbow skeletons track every finger!
+
+---
+
+### 🔍 What Makes It Special?
+
+* 🚫 In other modes (like iPad buttons or voice), the camera feed shows just plain video
+* 🎯 In this mode, **gesture overlays appear** — showing your hand's structure live!
+* 🧠 The AI runs on your Raspberry Pi, interpreting your hand shape and converting it into real-time car control commands!
+
+---
+
+### 🔧 Code of the camera feed
+
+#### 💻 HTML + JS (Front-End)
+
+```html
+<div class="video-container">
+  <img id="camera" src="/video_feed"
+       style="width: auto; max-width: 90%; height: 360px; aspect-ratio: 4 / 3; object-fit: contain; border-radius: 8px;" />
+</div>
+
+<script>
+  function updateVideoFeed() {
+      const camera = document.getElementById('camera');
+      if (current_control_mode === 'gesture_recognition') {
+          // Gesture overlays handled by backend
+          fetch('/video_feed').then(() => {});
+      }
+  }
+  setInterval(updateVideoFeed, 100);
+</script>
+```
+
+#### 🐍 Python (Back-End: Gesture Drawing)
+
+```python
+def gen_frames():
+    with mp_hands.Hands(
+        model_complexity=0,
+        min_detection_confidence=0.5,
+        min_tracking_confidence=0.5
+    ) as hands:
+        while True:
+            success, frame = camera.read()
+            if not success:
+                break
+            if gesture_active:
+                rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+                results = hands.process(rgb_frame)
+                if results.multi_hand_landmarks:
+                    for hand_landmarks in results.multi_hand_landmarks:
+                        mp_drawing.draw_landmarks(
+                            frame,
+                            hand_landmarks,
+                            mp_hands.HAND_CONNECTIONS,
+                            mp_drawing_styles.get_default_hand_landmarks_style(),
+                            mp_drawing_styles.get_default_hand_connections_style()
+                        )
+            _, buffer = cv2.imencode('.jpg', frame, [int(cv2.IMWRITE_JPEG_QUALITY), 70])
+            frame_bytes = buffer.tobytes()
+            yield (b'--frame\r\nContent-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n')
+```
+
+---
+
+🎯 **In Summary:**
+
+* You get a camera feed with **real-time gesture overlays**
+* Recognizes ✊ 3 hand gestures: **Thumb Up** (forward), **Thumb Down** (back), **Victory ✌️** (stop)
+* Visible **only when Gesture Mode is selected**
+* Great visual + AI feedback to control your car hands-free!
+
+---
+
+📎 Want to dive deeper?
+
+If you're curious about:
+
+* ✋ How the camera actually **detects your hand** and tracks gestures using **MediaPipe**
+* 🧠 How the system **decides which gesture equals which car action**
+* 🧪 Or how this gesture system was **trained and implemented**
+
+👉 check out this chapter:
+🔗 [Hand Gesture Recognition (MediaPipe)](Hand-Gesture-Recognition-MediaPipe.md)
+
+---
+
+
+
