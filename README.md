@@ -60,7 +60,7 @@ python Pi5car.py
 ### 1️⃣ [iPad Web Control](#)
 Use on-screen directional buttons (↑ ↓ ← →) with live feedback.
 
-### 2️⃣ [Switch Controller](#)
+### 2️⃣ [Switch Controller](switch-controller.md)
 ZR = Forward, ZL = Backward, D-Pad Left/Right to turn.
 
 ### 3️⃣ [Offline Voice Recognition (Vosk)](#)
