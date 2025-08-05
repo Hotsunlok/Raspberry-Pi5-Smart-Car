@@ -1,8 +1,4 @@
-Absolutely! Here's your improved **Front/Back LEDs** chapter written in a more beginner-friendly and fun style using ✨ emojis, clear formatting, and keeping all the technical detail (code + pinout + images):
 
----
-
-````markdown
 ## 🚗 Front/Back LEDs (Green = Forward, Red = Backward)
 
 This chapter gives a quick look at the **LED indicators** that show your car’s direction in real-time! These are small but super helpful parts of your Raspberry Pi 5 smart car project.
@@ -90,7 +86,7 @@ def move_backward(speed):
     in3.on(); in4.off()
     ena.value = speed
     enb.value = speed
-    green_led1.off()
+    green_led1.off()  # Green OFF
     green_led2.off()
     red_led1.on()     # Red ON
     red_led2.on()
@@ -128,7 +124,7 @@ def stop_motors():
     red_led1.off()
     red_led2.off()
     print("Action: Stop")
-````
+```
 
 ---
 
@@ -138,9 +134,3 @@ def stop_motors():
 * When `move_backward()` runs → Red LEDs turn ON 🔛
 * When turning left/right or stopping → **All LEDs turn OFF** ⚫
 
-Simple, clean, and works across all control modes! ✅
-
-```
-
-Let me know when you're ready to write the **"Hand Gesture Recognition (MediaPipe)"** chapter next or upload the real image filenames so we can replace the placeholders like `assets/front_green_leds.jpg`.
-```
