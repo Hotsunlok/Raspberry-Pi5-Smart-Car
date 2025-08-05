@@ -66,7 +66,7 @@ ZR = Forward, ZL = Backward, D-Pad Left/Right to turn.
 ### 3️⃣ [Offline Voice Recognition (Vosk)](Offline_Voice_Recognition_Vosk.md)
 Supports: “front”, “back”, “left”, “right”, “stop” — runs fully offline!
 
-### 4️⃣ [Hand Gesture Recognition (MediaPipe)](#)
+### 4️⃣ [Hand Gesture Recognition (MediaPipe)](Hand-Gesture-Recognition-MediaPipe.md)
 - 👍 Thumb Up → Turn Left  
 - 👎 Thumb Down → Turn Right  
 - ✌️ Victory → Stop  
