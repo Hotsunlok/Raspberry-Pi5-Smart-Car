@@ -47,7 +47,7 @@ python Pi5car.py
 ## 🛠️ Hardware Components Overview
 
 - 🧠 [Raspberry Pi 5](Raspberry-Pi5.md)
-- ⚙️ [L298N Motor Driver with 4 Wheels](#)
+- ⚙️ [L298N Motor Driver with 4 Wheels](L298N_Motor_Driver.md)
 - 🎮 [Nintendo Switch Pro Controller (Bluetooth)](Nintendo-Switch-Pro-Controller-Bluetooth.md)
 - 🎤 [Logitech Webcam Microphone (used for Vosk)](Logitech_Webcam_Microphone.md)
 - 📷 [Logitech Webcam (used for video + hand gesture detection)](Logitech_Webcam.md)
