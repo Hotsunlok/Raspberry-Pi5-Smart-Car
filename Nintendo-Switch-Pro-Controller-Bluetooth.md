@@ -1,6 +1,6 @@
 
 
-## 🎮 Nintendo Switch Pro Controller (Bluetooth)
+# 🎮 Nintendo Switch Pro Controller (Bluetooth)
 
 ![Switch Controller Flat View](assets/switch_controller_flat.jpg)  
 <br>
@@ -77,3 +77,9 @@ def read_controller_input():
 ```
 ✅ This ensures even if the device number changes after a reboot, by looking for “Pro Controller” in the name. If it’s not found, it retries every 3 seconds, ensuring the car stays controllable as long as the Bluetooth connection holds. 
 
+---
+
+📎 If you're interested in which buttons control the car directions (Forward, Backward, Left, Right),
+
+👉 check out this chapter: 
+ [Switch Controller](switch-controller.md) 
