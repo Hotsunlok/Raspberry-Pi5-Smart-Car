@@ -52,7 +52,7 @@ python Pi5car.py
 - 🎤 [Logitech Webcam Microphone (used for Vosk)](Logitech_Webcam_Microphone.md)
 - 📷 [Logitech Webcam (used for video + hand gesture detection)](Logitech_Webcam.md)
 - 📏 [HC-SR04 Distance Sensor + 🔊 Active Buzzer (Obstacle Detection)](HC-SR04-Buzzer.md)
-- 💡 [Front/Back LEDs (Green for Forward, Red for Backward)](#)
+- 💡 [Front/Back LEDs (Green for Forward, Red for Backward)](front_back_LEDs.md)
 
 ---
 ## ⚡ Control Modes (Features)
