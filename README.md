@@ -63,7 +63,7 @@ Use on-screen directional buttons (↑ ↓ ← →) with live feedback.
 ### 2️⃣ [Switch Controller](switch-controller.md)
 ZR = Forward, ZL = Backward, D-Pad Left/Right to turn.
 
-### 3️⃣ [Offline Voice Recognition (Vosk)](#)
+### 3️⃣ [Offline Voice Recognition (Vosk)](Offline_Voice_Recognition_Vosk.md)
 Supports: “front”, “back”, “left”, “right”, “stop” — runs fully offline!
 
 ### 4️⃣ [Hand Gesture Recognition (MediaPipe)](#)
