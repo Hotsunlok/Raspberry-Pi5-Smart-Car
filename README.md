@@ -57,7 +57,7 @@ python Pi5car.py
 ---
 ## ⚡ Control Modes (Features)
 
-### 1️⃣ [iPad Web Control](#)
+### 1️⃣ [iPad Web Control](iPad_Web_Control.md)
 Use on-screen directional buttons (↑ ↓ ← →) with live feedback.
 
 ### 2️⃣ [Switch Controller](switch-controller.md)
