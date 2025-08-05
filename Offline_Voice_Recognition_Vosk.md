@@ -164,6 +164,38 @@ def deinit_vosk():
 
 ---
 
+### 🎙️ Voice Command Actions Summary
+
+* **When you say "front" or "far":**
+
+  * 🚗 The car moves forward
+  * 💡 Front green LEDs turn ON
+  * 👀 Great for moving straight ahead!
+    [GIF Link: Car moving forward via voice](https://example.com/voice_front.gif)
+
+* **When you say "back" or "sack":**
+
+  * 🚗 The car moves backward
+  * 💡 Rear red LEDs turn ON
+  * 👀 Perfect for reversing safely!
+    [GIF Link: Car moving backward via voice](https://example.com/voice_back.gif)
+
+* **When you say "left", "net", "laugh", or "less":**
+
+  * 🔄 The car turns left
+  * 💡 All LEDs stay OFF
+  * 👀 Helpful for turning at corners!
+    [GIF Link: Car turning left via voice](https://example.com/voice_left.gif)
+
+* **When you say "right" or "write":**
+
+  * 🔄 The car turns right
+  * 💡 All LEDs stay OFF
+  * 👀 Smooth steering in tight spaces!
+    [GIF Link: Car turning right via voice](https://example.com/voice_right.gif)
+
+---
+
 ## 🔚 Final Notes
 
 * 🎤 The **Logitech webcam’s built-in mic** makes voice control plug-and-play!
