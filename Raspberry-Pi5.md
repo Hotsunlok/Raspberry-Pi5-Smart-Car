@@ -8,7 +8,7 @@
 
 ### 🖼️ Physical Raspberry Pi 5 (Top View)
 
-![RPi5 Board](assets/rpi5_photo.jpg)
+![RPi5 Board](assets/pi5.jpg)
 
 ---
 
