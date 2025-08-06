@@ -68,7 +68,7 @@ The video stream stays fixed at the center of the page and doesn’t disappear w
 and **how it also detects hand gestures**...
 
 👉 check out this chapter:  
-🔗 [Logitech Webcam (used for video + hand gesture detection)](Logitech-Webcam.md)
+🔗 [Logitech Webcam (used for video + hand gesture detection)](Logitech_Webcam.md)
 
 ---
 ### 🖱️ 3. iPad Web Control Buttons
