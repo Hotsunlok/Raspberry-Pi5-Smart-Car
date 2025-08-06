@@ -9,7 +9,7 @@ It **streams live video** for the web interface and also provides a **built-in m
 
 ### 🖼️ Webcam Hardware Overview
 
-Here’s what the webcam looks like:
+Here’s what the Logitech Brio 100 Webcam looks like:
 
 ![Logitech Webcam Brio 100](assets/logitech_webcam.jpg)
 
