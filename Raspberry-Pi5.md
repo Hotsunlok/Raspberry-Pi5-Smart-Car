@@ -2,7 +2,7 @@
 
 ### 📌 GPIO Pinout Reference
 
-![RPi5 Pinout](assets/rpi5_pinout.png)
+![RPi5 Pinout](assets/rpi5_pinout.jpg)
 
 ---
 
