@@ -1,6 +1,6 @@
 # 🧠 Raspberry Pi 5 Overview
 
-![Raspberry Pi 5 Component](assets/pi5.jpg) <!-- Replace with your actual image filename later -->
+![Raspberry Pi 5 Component](assets/pi5.jpg) 
 
 The **Raspberry Pi 5** acts as the brain of this smart robotic car. It:
 
