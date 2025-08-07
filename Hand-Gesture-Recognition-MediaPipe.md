@@ -103,7 +103,7 @@ def gesture_recognition_thread():
 ---
 
 ### 🧠 3. Car Control Logic + Speed Settings
-
+❗ ❗ ❗  the car will default as moving forward slowly if the webcam did not detect any gesture / hand movement ❗ ❗ ❗ 
 ```python
 # --- Speed Constants ---
 MAX_PWM_SPEED = 1.0
@@ -194,7 +194,4 @@ If you're interested in **Google’s hand gesture AI** or want to see how this d
 
 ---
 
-```
 
-Let me know when you're ready for the next chapter — or if you want help uploading those GIFs or pictures next!
-```
