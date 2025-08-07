@@ -28,7 +28,9 @@ This is what the model can recognize — including **Thumb Up**, **Thumb Down**,
 You can get the pre-trained model here (tested on Raspberry Pi 5):  
 👉 [Google's MediaPipe Raspberry Pi Sample](https://github.com/google-ai-edge/mediapipe-samples/tree/main/examples/gesture_recognizer/raspberry_pi)
 
-Once set up, you’ll see landmarks overlaying your hand in a live webcam feed!
+Once set up, you’ll see landmarks overlaying your hand in a live webcam feed!(which i proved in picture below)
+
+![7 Gesture Results from webcam](assets/webcam_gesture_result.jpg)
 
 ---
 
