@@ -16,7 +16,7 @@ In our project, we use the **Gesture Recognizer model** to detect hand movements
 📷 **Picture 1: Hand Landmark Detection Process**  
 The webcam tracks 21 key points on your hand in real-time!
 
-![Hand Landmark Demo](images/hand_landmark_example.jpg)
+![Hand Landmark Demo](assets/hand_landmark_example.jpg)
 
 📷 **Picture 2: Google's Pre-trained Gesture Results**  
 This is what the model can recognize — including **Thumb Up**, **Thumb Down**, and **Victory** gesture.
