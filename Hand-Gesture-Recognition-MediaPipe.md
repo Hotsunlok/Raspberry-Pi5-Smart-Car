@@ -3,8 +3,6 @@
 
 This chapter tackles one of the most exciting (and challenging!) control modes in the smart car: **Hand Gesture Recognition** using **MediaPipe** by Google AI. It brings vision-based AI into real-world action — you move your hand, and the car responds!
 
-You don’t need to be a machine learning expert to appreciate it. This section breaks things down in a way anyone can follow.
-
 ---
 
 ## 🧠 What Is MediaPipe?
@@ -21,7 +19,7 @@ The webcam tracks 21 key points on your hand in real-time!
 📷 **Picture 2: Google's Pre-trained Gesture Results**  
 This is what the model can recognize — including **Thumb Up**, **Thumb Down**, and **Victory** gesture.
 
-![7 Gesture Results from Google](images/gesture_results.jpg)
+![7 Gesture Results from Google](assets/gesture_results.jpg)
 
 ---
 
