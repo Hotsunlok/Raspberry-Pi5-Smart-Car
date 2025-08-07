@@ -5,13 +5,10 @@ This chapter introduces the **"Switch Controller"** mode from the dropdown menu,
 
 Let’s take a look at the controller views:
 
-📷 Flat view (steering with D-PAD left/right):
+📷 Flat + Top view (steering with D-PAD left/right, forward/backward with ZR/ZL buttons ):
 
-![Flat View with D-PAD Highlighted](images)
+![Flat +Top View of switch controller buttons](assets/switchbutton.jpg)
 
-📷 Top view (forward/backward with ZR/ZL buttons):
-
-![Top View with ZR/ZL Highlighted](images)
 
 These four buttons are all you need:
 
