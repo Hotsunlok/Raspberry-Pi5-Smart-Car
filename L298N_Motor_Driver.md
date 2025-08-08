@@ -37,7 +37,7 @@ Here’s a full diagram showing L298N connected to 4 wheels, a 12V battery, and 
 |-------------|------------------------|
 | ENA_GPIO    | GPIO 24               |
 | IN1_GPIO    | GPIO 17               |
-| IN2_GPIO    | GPIO 18               |
+| IN2_GPIO    | GPIO 27               |
 | ENB_GPIO    | GPIO 25               |
 | IN3_GPIO    | GPIO 22               |
 | IN4_GPIO    | GPIO 23               |
