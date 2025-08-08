@@ -30,7 +30,7 @@ You can get the pre-trained model here (tested on Raspberry Pi 5):
 
 Once set up, you’ll see landmarks overlaying your hand in a live webcam feed!(which i proved in picture below)
 
-![7 Gesture Results from webcam](assets/webcam_gesture_result.jpg)
+![7 Gesture Results from webcam](assets/webcam_gesture_result.JPG)
 
 ---
 
