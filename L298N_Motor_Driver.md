@@ -14,14 +14,14 @@ Imagine it like a road system with four switches: **S1, S2, S3, and S4** 🚦
   - Turn off S2 and S3 ❌
   - This lets current flow in one direction 🟢
 
-  ![Clockwise Circuit Picture](images)
+  ![Clockwise Circuit Picture](assets/motorclockwise.jpg)
 
 - 🔁 For **anticlockwise (backward)**:
   - Turn on S2 and S3 ✅
   - Turn off S1 and S4 ❌
   - This reverses the current 🔄
 
-  ![Anticlockwise Circuit Picture](images)
+  ![Anticlockwise Circuit Picture](assets/motoranticlockwise.jpg)
 
 Let’s connect this idea to the **real L298N driver**.
 
