@@ -23,7 +23,7 @@ Here’s how it works in simple steps:
 
 🧩 Here's a mind map that visualizes the process:
 
-![Mindmap of Voice Recognition Process](images/vosk_mindmap.jpg)
+![Mindmap of Voice Recognition Process](assets/vosk_mindmap.jpg)
 
 🔗 If you're curious about how to install Vosk, visit the official site: [https://alphacephei.com/vosk/](https://alphacephei.com/vosk/)
 
