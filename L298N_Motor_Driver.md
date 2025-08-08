@@ -2,7 +2,7 @@
 
 This chapter focuses on the **L298N motor driver**, which powers the four-wheel setup of your Raspberry Pi 5 car project. Here’s a look at the L298N motor driver component:
 
-![L298N Motor Driver Component](images)
+![L298N Motor Driver Component](assets/L298N.jpg)
 
 The L298N can be a bit tricky for beginners 😅, especially with its **H-bridge circuit**. But don’t worry—we’ll walk through it step by step 👣.
 
