@@ -40,7 +40,7 @@ if __name__ == '__main__':
     sudo ifconfig wlan0 192.168.4.1
     ```
 
-3. **On your iPad**, go to **Settings > Wi-Fi** and look for a network named `"Pi5 car"`.
+3. **On your iPad**, go to **Settings > Wi-Fi** and look for a network named `"Pi-Car"`.
 
    Connect to it to access the web control interface from Safari or Chrome.
 
