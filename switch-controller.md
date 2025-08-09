@@ -58,7 +58,7 @@ Each button is linked to a clear action in the program—no confusion, just moti
 
 When you choose **Switch Controller** from the dropdown menu, all on-screen buttons disappear—so your iPad screen only shows the **live streaming box** for the camera view:
 
-![Screenshot of Switch Controller Mode](images/switch_controller_web.jpg)
+![Screenshot of Switch Controller Mode](assets/switch_controller_web.jpg)
 
 
 ---
