@@ -196,7 +196,7 @@ This feature pops up a warning to let you know the car is getting too close to a
 
 📸 Screenshot of the warning box:
 
-![Obstacle Warning Screenshot](assets/obstacle_warning.png)
+![Obstacle Warning Screenshot](assets/obstacle_warning.jpg)
 
 
 ---
@@ -299,7 +299,7 @@ Perfect! Here's the improved and polished version of your **📢 Voice Recogniti
 
 📸 Screenshot of the feedback display:
 
-![Voice Feedback Screenshot](assets/voice_feedback.png)
+![Voice Feedback Screenshot](assets/voice_feedback.jpg)
 
 
 This feedback box appears **only when "Voice Control" is selected** from the dropdown menu.
@@ -407,7 +407,7 @@ Here’s your ✋ **Gesture Detection Camera Input** section, upgraded with emoj
 ```md
 | 🖐️ Thumb Up (Left)       | 👎 Thumb Down (Right)     | ✌️ Victory (Stop Sign)     |
 |--------------------------|---------------------------|----------------------------|
-| ![Thumb Up](assets/thumb_up.png) | ![Thumb Down](assets/thumb_down.png) | ![Victory Sign](assets/victory.png) |
+| ![Thumb Up](assets/thumb_up.jpg) | ![Thumb Down](assets/thumb_down.jpg) | ![Victory Sign](assets/victory.jpg) |
 ```
 
 This mode is **exclusive to "Gesture Recognition"** in the dropdown menu — and it's where the camera feed becomes much more than just a live view!
