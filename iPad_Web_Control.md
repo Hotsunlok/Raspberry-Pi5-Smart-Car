@@ -7,7 +7,7 @@ You’ll see:
 - 📷 A live camera stream from the car
 - ⚠️ A warning box when the car gets too close to an obstacle
 
-![iPad Button Layout Screenshot](assets/ipad_buttons.jpg)
+![iPad Button Layout Screenshot](assets/ipad_buttons_web.jpg)
 
 Let’s break it down into four parts based on what each button does:
 
