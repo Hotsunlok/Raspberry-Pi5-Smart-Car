@@ -16,7 +16,7 @@ It offers better resolution and clarity compared to the Pi Camera Module — per
 
 To get started, simply plug the **Logitech Brio 100** into one of the Raspberry Pi 5’s **USB 3.0 ports**.  
 
-![USB 3.0 Port Connection](assets/usb3_port(1).jpg)
+![USB 3.0 Port Connection](assets/usb3_port.jpg)
 
 Once connected, it’s ready to handle **video streaming** and **gesture recognition**!
 
