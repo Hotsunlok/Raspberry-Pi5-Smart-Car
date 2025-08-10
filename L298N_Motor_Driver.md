@@ -27,7 +27,7 @@ Let’s connect this idea to the **real L298N driver**.
 
 Here’s a full diagram showing L298N connected to 4 wheels, a 12V battery, and your Pi 5:
 
-![Full L298N Circuit with 4 Wheels](images/l298n_full_circuit.jpg)
+![Full L298N Circuit with 4 Wheels](assets/l298n_full_circuit-3.jpg)
 
 ---
 
